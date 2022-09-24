@@ -1,0 +1,95 @@
+@use "./color" as *;
+@use "./font" as *;
+@use "./media" as *;
+
+.num {
+  width: 100%;
+  background-color: $textColor;
+  padding: 70px 100px;
+
+  .titel {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+      font-family: $font-family1;
+      font-size: 35px;
+      color: #fff;
+    }
+    p {
+      font-family: $font-family1;
+      color: #fff;
+      margin: 15px 0;
+    }
+  }
+
+  .div_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+    margin-bottom: 70px;
+
+    .div1 {
+      img {
+        display: block;
+      }
+      h4 {
+        font-family: $font-family1;
+        color: #fff;
+        margin: 20px 30px 20px 0;
+        display: inline-block;
+      }
+
+      p {
+        font-family: $font-family1;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      i {
+        color: #fff;
+      }
+      .star {
+        color: gold;
+      }
+    }
+  }
+  .number {
+    display: grid;
+    grid-template-columns: repeat(4, 22%);
+    justify-content: space-between;
+    color: #fff;
+    font-family: $font-family1;
+
+    h4 {
+      font-size: 50px;
+      margin-bottom: 5px;
+    }
+  }
+}
+@media (max-width:$media-tab1) {
+    .num{
+        padding: 50px 50px;
+
+        .titel{
+            h2{
+                font-size: 30px;
+            }
+        }
+
+        .div_grid{
+            display: grid;
+            grid-template-columns: 100%;
+            gap: 50px;
+        }
+    }
+}
+@media (max-width:$media-tab2) {
+    .num {
+        padding: 50px 30px;
+
+        .number{
+            grid-template-columns: 48% 48%;
+            gap: 30px;
+        }
+    }
+}
